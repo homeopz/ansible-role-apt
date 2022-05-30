@@ -103,6 +103,10 @@
     - apt
     - apt-clean
 
+- name: packages debug
+  ansible.builtin.debug:
+    msg: HELLO
+
 - name: install
   ansible.builtin.apt:
     name: "{{ apt_install }}"
