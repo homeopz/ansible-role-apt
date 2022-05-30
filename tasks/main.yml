@@ -105,7 +105,7 @@
 
 - name: debug - apt_install
   ansible.builtin.debug:
-    msg: "{{ apt_install }}"
+    msg: "{{ apt_install.join(',') }}"
   tags:
     - configuration
     - apt
@@ -122,7 +122,7 @@
 
 - name: debug - apt_remove
   ansible.builtin.debug:
-    msg: "{{ apt_remove }}"
+    msg: "{{ apt_remove.join(',') }}"
   tags:
     - configuration
     - apt
