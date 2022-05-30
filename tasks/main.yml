@@ -103,9 +103,13 @@
     - apt
     - apt-clean
 
-- name: packages debug
+- name: debug - apt_install
   ansible.builtin.debug:
-    msg: HELLO
+    msg: "{{ apt_install }}"
+  tags:
+    - configuration
+    - apt
+    - apt-debug
 
 - name: install
   ansible.builtin.apt:
@@ -115,6 +119,14 @@
     - configuration
     - apt
     - apt-install
+
+- name: debug - apt_remove
+  ansible.builtin.debug:
+    msg: "{{ apt_remove }}"
+  tags:
+    - configuration
+    - apt
+    - apt-debug
 
 - name: remove
   ansible.builtin.apt:
