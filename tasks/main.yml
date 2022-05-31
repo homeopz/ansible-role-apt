@@ -26,7 +26,6 @@
   ansible.builtin.apt:
     upgrade: "{{ apt_upgrade_type }}"
     update_cache: true
-    dpkg_options: "{{ apt_upgrade_dpkg_options | join(',') }}"
   when: apt_upgrade
   tags: [apt, upgrade]
 
