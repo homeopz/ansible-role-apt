@@ -64,6 +64,5 @@
 - name: Autoremove packages
   ansible.builtin.apt:
     autoremove: true
-    dpkg_options: "{{ apt_upgrade_dpkg_options | join(',') }}"
   when: apt_autoremove
   tags: [apt, autoremove]
