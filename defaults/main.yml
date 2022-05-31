@@ -13,16 +13,16 @@ apt_ubuntu_extras_enable: false
 apt_dependencies:
   - "{{ (ansible_distribution == 'Debian' and ansible_distribution_version is version('8', '<')) | ternary('python-apt', 'python3-apt') }}"
   - aptitude
-apt_update: true
+apt_update: false
 apt_update_cache_valid_time: 3600
-apt_upgrade: true
+apt_upgrade: false
 apt_upgrade_type: dist
 apt_upgrade_dpkg_options:
   - force-confdef
   - force-confold
 apt_dpkg_configure: false
-apt_clean: true
-apt_autoremove: true
+apt_clean: false
+apt_autoremove: false
 apt_install: []
 apt_install_state: latest
 apt_remove: []
