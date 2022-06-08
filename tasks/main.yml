@@ -39,7 +39,6 @@
   ansible.builtin.apt:
     name: "{{ apt_remove }}"
     state: absent
-    purge: "{{ apt_remove_purge }}"
   tags:
     - remove
 
