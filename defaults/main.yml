@@ -1,5 +1,5 @@
 ---
-apt_update: true
+apt_update: false
 apt_upgrade: false
 apt_autoremove: false
 apt_install: []
