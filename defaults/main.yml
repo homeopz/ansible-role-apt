@@ -1,9 +1,6 @@
 ---
 apt_update: true
-apt_upgrade: true
-apt_upgrade_type: dist
-apt_clean: true
-apt_autoremove: true
+apt_upgrade: false
+apt_autoremove: false
 apt_install: []
 apt_remove: []
-apt_remove_purge: false
